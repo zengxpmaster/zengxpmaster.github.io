@@ -15,18 +15,18 @@ code.hljs {
  */
 .hljs {
   background: #2d2b57;
-  color: #e3dfff;
+  color: #e8e4ff;
   font-weight: normal
 }
 .hljs-subst {
-  color: #e3dfff
+  color: #e8e4ff
 }
 .hljs-title {
   color: #fad000;
   font-weight: normal
 }
 .hljs-name {
-  color: #a1feff
+  color: #9ef7f8
 }
 .hljs-tag {
   color: #ffffff
@@ -63,7 +63,7 @@ code.hljs {
   color: #fb9e00
 }
 .hljs-comment {
-  color: #ac65ff
+  color: #ac63ff
 }
 .hljs-keyword,
 .hljs-selector-tag,
