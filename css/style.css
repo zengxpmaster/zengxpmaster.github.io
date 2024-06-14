@@ -5,7 +5,7 @@
   --neut-L30: rgba(255,255,255,0.3);
   --neut-L10: rgba(255,255,255,0.1);
   --banner-dim: rgba(0,0,0,0.2);
-  --primary-hue: 250;
+  --primary-hue: 298;
   --main-title: rgba(255,255,255,0.9);
   --btn-content: var(--neut-L75);
   --btn-content-hover: var(--btn-content);
@@ -73,37 +73,37 @@
 }
 @supports not (color: oklch(0 0 0)) {
   :root {
-    --primary: #63b3ff;
-    --nav-dropdown-bg: #0f171f;
-    --page-background: #090e13;
-    --card-background: #1a222b;
-    --btn-bg: #324457;
-    --btn-hover: #42576e;
-    --btn-active: #4d667f;
-    --card-btn-hover: #222f3c;
-    --card-btn-active: #2d3c4c;
-    --btn-text-hover: #0f171f;
-    --btn-text-active: #0a1017;
-    --timeline-dim-dot: #4d667f;
-    --title-active: #5194d5;
-    --tag-dot: #1a222b;
-    --highlight-selection: #2d3c4c;
-    --article-code-bg: #374a5d;
-    --article-block: #0f171f;
-    --link-hover-bg: #224a71;
-    --link-active-bg: #1b3c5d;
-    --blockquote-bg: #0f171f;
-    --color-picker-range: #374a5d;
-    --badge-bg: #70b3f7;
-    --text-on-light: #1a222b;
-    --pagenav-curr-text: #1a222b;
-    --input-field: #0f171f;
-    --primary-btn-text: #1a222b;
-    --enter-btn-bg: #0f171f;
-    --enter-btn-hover: #222f3c;
-    --enter-btn-active: #2d3c4c;
-    --selection-bg: #224a71;
-    --code-block-selection-bg: #224a71;
+    --primary: #b999fb;
+    --nav-dropdown-bg: #17141e;
+    --page-background: #0e0c13;
+    --card-background: #23202a;
+    --btn-bg: #453e55;
+    --btn-hover: #58506b;
+    --btn-active: #665d7c;
+    --card-btn-hover: #2f2b3b;
+    --card-btn-active: #3d374b;
+    --btn-text-hover: #17141e;
+    --btn-text-active: #100e16;
+    --timeline-dim-dot: #665d7c;
+    --title-active: #987ecf;
+    --tag-dot: #23202a;
+    --highlight-selection: #3d374b;
+    --article-code-bg: #4a435b;
+    --article-block: #17141e;
+    --link-hover-bg: #4d3d6d;
+    --link-active-bg: #3f325a;
+    --blockquote-bg: #17141e;
+    --color-picker-range: #4a435b;
+    --badge-bg: #b79df0;
+    --text-on-light: #23202a;
+    --pagenav-curr-text: #23202a;
+    --input-field: #17141e;
+    --primary-btn-text: #23202a;
+    --enter-btn-bg: #17141e;
+    --enter-btn-hover: #2f2b3b;
+    --enter-btn-active: #3d374b;
+    --selection-bg: #4d3d6d;
+    --code-block-selection-bg: #4d3d6d;
   }
 }
 :root[theme='light'] {
@@ -158,31 +158,31 @@
 }
 @supports not (color: oklch(0 0 0)) {
   :root[theme='light'] {
-    --primary: #53a3f2;
-    --page-background: #eaeff5;
-    --nav-dropdown-bg: #f6f9fc;
-    --btn-bg: #e2f0ff;
-    --btn-content: #3275b4;
-    --btn-hover: #c6e1ff;
-    --btn-active: #a6d2ff;
-    --btn-text-hover: #e2f0ff;
-    --btn-text-active: #f4f9ff;
-    --btn-text-content: #53a3f2;
-    --card-btn-hover: #f6f9fc;
-    --card-btn-active: #d0e0f2;
-    --title-active: #4284c5;
-    --link-hover-bg: #e2f0ff;
-    --link-active-bg: #c6e1ff;
-    --article-code-bg: #e5f0fc;
-    --blockquote-bg: #f6f9fc;
-    --badge-bg: #e5f0fc;
-    --text-on-light: #3275b4;
-    --color-picker-range: #e5f0fc;
-    --input-field: #f6f9fc;
-    --enter-btn-bg: #f6f9fc;
-    --enter-btn-hover: #ebf3fc;
-    --enter-btn-active: #d0e0f2;
-    --selection-bg: #c6e1ff;
+    --primary: #a98aea;
+    --page-background: #efedf4;
+    --nav-dropdown-bg: #f9f8fb;
+    --btn-bg: #f0ebfe;
+    --btn-content: #7b60ae;
+    --btn-hover: #e2d8fc;
+    --btn-active: #d4c3fc;
+    --btn-text-hover: #f0ebfe;
+    --btn-text-active: #f9f7ff;
+    --btn-text-content: #a98aea;
+    --card-btn-hover: #f9f8fb;
+    --card-btn-active: #e0daf0;
+    --title-active: #896fbe;
+    --link-hover-bg: #f0ebfe;
+    --link-active-bg: #e2d8fc;
+    --article-code-bg: #f0ecfb;
+    --blockquote-bg: #f9f8fb;
+    --badge-bg: #f0ecfb;
+    --text-on-light: #7b60ae;
+    --color-picker-range: #f0ecfb;
+    --input-field: #f9f8fb;
+    --enter-btn-bg: #f9f8fb;
+    --enter-btn-hover: #f3f0fb;
+    --enter-btn-active: #e0daf0;
+    --selection-bg: #e2d8fc;
   }
 }
 body {
@@ -2343,6 +2343,11 @@ a.article-title:active {
   -webkit-align-items: center;
   align-items: center;
   height: 72px;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   -webkit-transition: background 0.15s ease-out, color 0.15s ease-out;
   -moz-transition: background 0.15s ease-out, color 0.15s ease-out;
   -ms-transition: background 0.15s ease-out, color 0.15s ease-out;

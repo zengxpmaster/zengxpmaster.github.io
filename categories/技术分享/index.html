@@ -11,40 +11,12 @@
   <meta charset="utf-8">
   
   
-<!-- Global site tag (gtag.js) - Baidu Analytics -->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?2fd8abaf88ed11218538bfebc69557aa";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<!-- End Baidu Analytics -->
-
   
-<!-- Gaug.es Analytics -->
-<script>
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', 'true');
-    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
-    t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
-<!-- End Gaug.es Analytics -->
-
 
   
   <title>目录: 技术分享 | zengxp&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -70,6 +42,11 @@ var _hmt = _hmt || [];
   
     <link rel="stylesheet" href="/css/highlight/styles/shades-of-purple.css">
   
+    <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.net/waline/3.0.0-alpha.9/waline.css"
+    />
+  
   
 <link rel="stylesheet" href="/css/style.css">
 
@@ -94,11 +71,13 @@ var _hmt = _hmt || [];
   </nav>
   <nav id="main-nav">
     
-      <a class="main-nav-link" href="/">Home</a>
+      <a class="main-nav-link" href="/">主页</a>
     
-      <a class="main-nav-link" href="/archives">Archives</a>
+      <a class="main-nav-link" href="/archives">归档</a>
     
-      <a class="main-nav-link" href="/about">About</a>
+      <a class="main-nav-link" href="/message-board">留言板</a>
+    
+      <a class="main-nav-link" href="/about">关于</a>
     
   </nav>
   <nav id="sub-nav">
@@ -119,11 +98,13 @@ var _hmt = _hmt || [];
 <div id="nav-dropdown" class="hidden">
   <div id="dropdown-link-list">
     
-      <a class="nav-dropdown-link" href="/">Home</a>
+      <a class="nav-dropdown-link" href="/">主页</a>
     
-      <a class="nav-dropdown-link" href="/archives">Archives</a>
+      <a class="nav-dropdown-link" href="/archives">归档</a>
     
-      <a class="nav-dropdown-link" href="/about">About</a>
+      <a class="nav-dropdown-link" href="/message-board">留言板</a>
+    
+      <a class="nav-dropdown-link" href="/about">关于</a>
     
     
       <a class="nav-dropdown-link" href="/atom.xml" title="RSS 订阅">RSS</a>
@@ -261,13 +242,29 @@ var _hmt = _hmt || [];
     <div id="footer-wrapper">
       <footer id="footer">
   
-  <div id="footer-info" class="inner">
-    
-    &copy; 2024 zengxpmaster<br>
-    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
-  </div>
-  <div style="float: right; width: 300px; border-left: 2px solid #999999;padding-left:40px;;">本站未注明转载的文章均为原创，并采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">CC BY-NC-SA 4.0</a> <img style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">授权协议，<br><span style="color: #ff5959">转载请注明来源</span>，谢谢！
-  </div>
+        <div id="footer-info" class="inner">
+          
+                &copy; 2024
+                  zengxpmaster<br>
+                    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a
+                        target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+        </div>
+        <div style="float: right; width: 300px; border-left: 2px solid #999999;padding-left:40px;margin-right: 50px;">本站未注明转载的文章均为原创，并采用
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">CC BY-NC-SA
+            4.0</a>授权协议，<br><span style="color: #ff5959">转载请注明来源</span>，谢谢！
+          <svg data-icon="fa6-brands:creative-commons" height="60" viewBox="0 0 496 512" width="60" style="position: absolute;
+            top:10px;
+          right: 0.5rem;
+          color: rgb(0 0 0 / 0.15);"
+            <symbol id="ai:fa6-brands:creative-commons">
+              <path
+                d="m245.83 214.87l-33.22 17.28c-9.43-19.58-25.24-19.93-27.46-19.93c-22.13 0-33.22 14.61-33.22 43.84c0 23.57 9.21 43.84 33.22 43.84c14.47 0 24.65-7.09 30.57-21.26l30.55 15.5c-6.17 11.51-25.69 38.98-65.1 38.98c-22.6 0-73.96-10.32-73.96-77.05c0-58.69 43-77.06 72.63-77.06c30.72-.01 52.7 11.95 65.99 35.86m143.05 0l-32.78 17.28c-9.5-19.77-25.72-19.93-27.9-19.93c-22.14 0-33.22 14.61-33.22 43.84c0 23.55 9.23 43.84 33.22 43.84c14.45 0 24.65-7.09 30.54-21.26l31 15.5c-2.1 3.75-21.39 38.98-65.09 38.98c-22.69 0-73.96-9.87-73.96-77.05c0-58.67 42.97-77.06 72.63-77.06c30.71-.01 52.58 11.95 65.56 35.86M247.56 8.05C104.74 8.05 0 123.11 0 256.05c0 138.49 113.6 248 247.56 248c129.93 0 248.44-100.87 248.44-248c0-137.87-106.62-248-248.44-248m.87 450.81c-112.54 0-203.7-93.04-203.7-202.81c0-105.42 85.43-203.27 203.72-203.27c112.53 0 202.82 89.46 202.82 203.26c-.01 121.69-99.68 202.82-202.84 202.82"
+                fill="currentColor"></path>
+            </symbol>
+            <use xlink:href="#ai:fa6-brands:creative-commons"></use>
+          </svg>
+        </div>
+
 </footer>
 <script src="/js/highlight.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
