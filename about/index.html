@@ -23,16 +23,16 @@
   <meta name="description" content="个人介绍我父亲是维修工，可能是从小耳濡目染，也有可能是好奇心所使，我学习了软件工程技术。 我开朗，脾气好。 我有许多毛病，就比如三分钟热度，这使我无法系统地学习一项编程语言，这对我造成了很大困扰。 我承认我是一个不完美的人，但我只想做一个不完美的平凡人。 联系方式邮箱：zengxianpei2333@outlook.com QQ：1014578725">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于">
-<meta property="og:url" content="https://zengxpmaster.github.io/about/">
+<meta property="og:url" content="https://www.zengxpmaster.fun/about/">
 <meta property="og:site_name" content="zengxp&#39;s Blog">
 <meta property="og:description" content="个人介绍我父亲是维修工，可能是从小耳濡目染，也有可能是好奇心所使，我学习了软件工程技术。 我开朗，脾气好。 我有许多毛病，就比如三分钟热度，这使我无法系统地学习一项编程语言，这对我造成了很大困扰。 我承认我是一个不完美的人，但我只想做一个不完美的平凡人。 联系方式邮箱：zengxianpei2333@outlook.com QQ：1014578725">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zengxpmaster.github.io/about/index/index_2024_06_14-15_24_17.png">
+<meta property="og:image" content="https://www.zengxpmaster.fun/about/index/index_2024_06_14-15_24_17.png">
 <meta property="article:published_time" content="2024-05-08T09:00:00.000Z">
 <meta property="article:modified_time" content="2024-06-14T07:25:55.162Z">
 <meta property="article:author" content="zengxpmaster">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zengxpmaster.github.io/about/index/index_2024_06_14-15_24_17.png">
+<meta name="twitter:image" content="https://www.zengxpmaster.fun/about/index/index_2024_06_14-15_24_17.png">
   
     <link rel="alternate" href="/atom.xml" title="zengxp's Blog" type="application/atom+xml">
   
@@ -47,11 +47,6 @@
     <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-192.png" sizes="192x192">
   
     <link rel="stylesheet" href="/css/highlight/styles/shades-of-purple.css">
-  
-    <link
-      rel="stylesheet"
-      href="https://cdn.staticfile.net/waline/3.0.0-alpha.9/waline.css"
-    />
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -251,24 +246,25 @@
 
 
 
-
-
-  <div id="wl-comment-card" class="wl-comment-card">
+  <script src="https://cdn.staticfile.org/twikoo/1.6.26/twikoo.all.min.js"></script>
+  <div id="comment-card" class="comment-card">
     <div class="main-title-bar">
       <div class="main-title-dot"></div>
       <div class="main-title">留言 </div>
     </div>
-    <div id="waline"></div>
+    <div id="tcomment"></div>
   </div>
-  <script type="module">
-    import { init } from 'https://cdn.staticfile.net/waline/3.0.0-alpha.9/waline.js';
-
-    init({
-      el: '#waline',
-      serverURL: 'https://vercel.zengxpmaster.fun/',
-      dark: 'html[theme="dark"]',
-    });
+  <script>
+      twikoo.init({
+          envId: 'https://netlify.zengxpmaster.fun/.netlify/functions/twikoo',
+          el: '#tcomment',
+          region: '',
+          path: 'location.pathname',
+          lang: 'zh-CN',
+      })
   </script>
+  
+
 
     </div>
     <div id="footer-wrapper">

@@ -23,7 +23,7 @@
   <meta name="description" content="利用 GitHub Pages 搭建博客使用 Hexo 框架搭建博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何搭建个人博客">
-<meta property="og:url" content="https://zengxpmaster.github.io/2024-05/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html">
+<meta property="og:url" content="https://www.zengxpmaster.fun/2024-05/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html">
 <meta property="og:site_name" content="zengxp&#39;s Blog">
 <meta property="og:description" content="利用 GitHub Pages 搭建博客使用 Hexo 框架搭建博客">
 <meta property="og:locale" content="zh_CN">
@@ -47,11 +47,6 @@
     <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-192.png" sizes="192x192">
   
     <link rel="stylesheet" href="/css/highlight/styles/shades-of-purple.css">
-  
-    <link
-      rel="stylesheet"
-      href="https://cdn.staticfile.net/waline/3.0.0-alpha.9/waline.css"
-    />
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -328,24 +323,25 @@
 
 
 
-
-
-  <div id="wl-comment-card" class="wl-comment-card">
+  <script src="https://cdn.staticfile.org/twikoo/1.6.26/twikoo.all.min.js"></script>
+  <div id="comment-card" class="comment-card">
     <div class="main-title-bar">
       <div class="main-title-dot"></div>
       <div class="main-title">留言 </div>
     </div>
-    <div id="waline"></div>
+    <div id="tcomment"></div>
   </div>
-  <script type="module">
-    import { init } from 'https://cdn.staticfile.net/waline/3.0.0-alpha.9/waline.js';
-
-    init({
-      el: '#waline',
-      serverURL: 'https://vercel.zengxpmaster.fun/',
-      dark: 'html[theme="dark"]',
-    });
+  <script>
+      twikoo.init({
+          envId: 'https://netlify.zengxpmaster.fun/.netlify/functions/twikoo',
+          el: '#tcomment',
+          region: '',
+          path: 'location.pathname',
+          lang: 'zh-CN',
+      })
   </script>
+  
+
 
     </div>
     <div id="footer-wrapper">

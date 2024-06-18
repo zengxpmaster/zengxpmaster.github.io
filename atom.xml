@@ -3,11 +3,11 @@
   <title>zengxp&#39;s Blog</title>
   
   
-  <link href="https://zengxpmaster.github.io/atom.xml" rel="self"/>
+  <link href="https://www.zengxpmaster.fun/atom.xml" rel="self"/>
   
-  <link href="https://zengxpmaster.github.io/"/>
+  <link href="https://www.zengxpmaster.fun/"/>
   <updated>2024-06-11T04:41:05.214Z</updated>
-  <id>https://zengxpmaster.github.io/</id>
+  <id>https://www.zengxpmaster.fun/</id>
   
   <author>
     <name>zengxpmaster</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>如何破解校园网多设备限制</title>
-    <link href="https://zengxpmaster.github.io/2024-05/%E5%A6%82%E4%BD%95%E7%A0%B4%E8%A7%A3%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%A4%9A%E8%AE%BE%E5%A4%87%E9%99%90%E5%88%B6.html"/>
-    <id>https://zengxpmaster.github.io/2024-05/%E5%A6%82%E4%BD%95%E7%A0%B4%E8%A7%A3%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%A4%9A%E8%AE%BE%E5%A4%87%E9%99%90%E5%88%B6.html</id>
+    <link href="https://www.zengxpmaster.fun/2024-05/%E5%A6%82%E4%BD%95%E7%A0%B4%E8%A7%A3%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%A4%9A%E8%AE%BE%E5%A4%87%E9%99%90%E5%88%B6.html"/>
+    <id>https://www.zengxpmaster.fun/2024-05/%E5%A6%82%E4%BD%95%E7%A0%B4%E8%A7%A3%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%A4%9A%E8%AE%BE%E5%A4%87%E9%99%90%E5%88%B6.html</id>
     <published>2024-05-11T04:00:00.000Z</published>
     <updated>2024-06-11T04:41:05.214Z</updated>
     
@@ -30,17 +30,17 @@
     
     
     
-    <category term="技术分享" scheme="https://zengxpmaster.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://www.zengxpmaster.fun/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="OpenWrt" scheme="https://zengxpmaster.github.io/tags/OpenWrt/"/>
+    <category term="OpenWrt" scheme="https://www.zengxpmaster.fun/tags/OpenWrt/"/>
     
   </entry>
   
   <entry>
     <title>如何搭建个人博客</title>
-    <link href="https://zengxpmaster.github.io/2024-05/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
-    <id>https://zengxpmaster.github.io/2024-05/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</id>
+    <link href="https://www.zengxpmaster.fun/2024-05/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
+    <id>https://www.zengxpmaster.fun/2024-05/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</id>
     <published>2024-05-09T09:36:47.000Z</published>
     <updated>2024-06-14T11:11:01.256Z</updated>
     
@@ -51,12 +51,12 @@
     
     
     
-    <category term="技术分享" scheme="https://zengxpmaster.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://www.zengxpmaster.fun/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="GitHub" scheme="https://zengxpmaster.github.io/tags/GitHub/"/>
+    <category term="GitHub" scheme="https://www.zengxpmaster.fun/tags/GitHub/"/>
     
-    <category term="Hexo" scheme="https://zengxpmaster.github.io/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://www.zengxpmaster.fun/tags/Hexo/"/>
     
   </entry>
   
