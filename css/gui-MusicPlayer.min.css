@@ -1,0 +1,738 @@
+#gui-MusicPlayer,
+.gui-MusicPlayer {
+font-size: 16px !important;
+}
+#gui-MusicPlayer *,
+.gui-MusicPlayer * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+-webkit-tap-highlight-color: transparent;
+}
+#gui-MusicPlayer .gui-original,
+.gui-MusicPlayer .gui-original {
+--playerColor-1: #fff;
+--playerColor-2: #000;
+--playerColor-3: #5c00ff;
+--playerColor-4: #b3c4ec;
+--playerColor-5: #90a6da;
+--playerColor-6: #8b52ec;
+--playerColor-7: #ffc0cb;
+--playerColor-8: #5880dc;
+--playerColor-9: #efefef;
+--playerColor-10: #a17eff;
+--playerColor-11: #ffc5fe;
+--playerColor-12: #84d6ff;
+--playerColor-rgab-1: rgba(0, 0, 0, 0.3);
+--playerColor-rgab-2: rgba(255, 255, 255, 0.8);
+--playerShadow-1: 2px 2px 5px 0 rgba(139, 126, 192, 0.35);
+--playerShadow-2: -3.5px 3.5px 5px 0px rgba(255, 255, 255, 0.25), inset -3.5px 3.5px 7px 0px rgba(0, 0, 0, .25);
+--playerTextShadow-1: 0 0 1.5px rgba(85, 0, 255, 0.3);
+--playerTextShadow-2: 0 0 1.5px rgba(255, 255, 255, 0.8);
+}
+#gui-MusicPlayer .gui-sky,
+.gui-MusicPlayer .gui-sky {
+--playerColor-1: #fff;
+--playerColor-2: #000;
+--playerColor-3: #0d6efd;
+--playerColor-4: #b3c4ec;
+--playerColor-5: #92bbee;
+--playerColor-6: #52aeec;
+--playerColor-7: #a8cbfa;
+--playerColor-8: #5880dc;
+--playerColor-9: #efefef;
+--playerColor-10: #ff7e7e;
+--playerColor-11: #c5f2ff;
+--playerColor-12: #ff84e2;
+--playerColor-rgab-1: rgba(0, 0, 0, 0.3);
+--playerColor-rgab-2: rgba(255, 255, 255, 0.8);
+--playerShadow-1: 2px 2px 5px 0 rgba(126, 170, 192, 0.35);
+--playerShadow-2: -3.5px 3.5px 5px 0px rgba(255, 255, 255, 0.25), inset -3.5px 3.5px 7px 0px rgba(0, 0, 0, .25);
+--playerTextShadow-1: 0 0 1.5px rgba(0, 225, 255, 0.3);
+--playerTextShadow-2: 0 0 1.5px rgba(255, 255, 255, 0.8);
+}
+#gui-MusicPlayer .gui-orange,
+.gui-MusicPlayer .gui-orange {
+--playerColor-1: #fff;
+--playerColor-2: #000;
+--playerColor-3: #ff8c00;
+--playerColor-4: #ffc28e;
+--playerColor-5: #ffb87a;
+--playerColor-6: #ffa500;
+--playerColor-7: #ffdab9;
+--playerColor-8: #ff8c00;
+--playerColor-9: #efefef;
+--playerColor-10: #ffe97e;
+--playerColor-11: #cfffc5;
+--playerColor-12: #84fffb;
+--playerColor-rgab-1: rgba(0, 0, 0, 0.3);
+--playerColor-rgab-2: rgba(255, 255, 255, 0.8);
+--playerShadow-1: 2px 2px 5px 0 rgba(192, 160, 126, 0.35);
+--playerShadow-2: -3.5px 3.5px 5px 0px rgba(255, 255, 255, 0.25), inset -3.5px 3.5px 7px 0px rgba(0, 0, 0, .25);
+--playerTextShadow-1: 0 0 1.5px rgba(255, 165, 0, 0.3);
+--playerTextShadow-2: 0 0 1.5px rgba(255, 255, 255, 0.8);
+}
+#gui-MusicPlayer .gui-darkGreen,
+.gui-MusicPlayer .gui-darkGreen {
+--playerColor-1: #fff;
+--playerColor-2: #000;
+--playerColor-3: #0d870d;
+--playerColor-4: #8bb88b;
+--playerColor-5: #60a060;
+--playerColor-6: #1a8a1a;
+--playerColor-7: #adff2f;
+--playerColor-8: #0e780e;
+--playerColor-9: #efefef;
+--playerColor-10: #9acd32;
+--playerColor-11: #90ee90;
+--playerColor-12: #00fa9a;
+--playerColor-rgab-1: rgba(0, 0, 0, 0.3);
+--playerColor-rgab-2: rgba(255, 255, 255, 0.8);
+--playerShadow-1: 2px 2px 5px 0 rgba(126, 192, 139, 0.35);
+--playerShadow-2: -3.5px 3.5px 5px 0px rgba(255, 255, 255, 0.25), inset -3.5px 3.5px 7px 0px rgba(0, 0, 0, .25);
+--playerTextShadow-1: 0 0 1.5px rgba(0, 100, 0, 0.3);
+--playerTextShadow-2: 0 0 1.5px rgba(255, 255, 255, 0.8);
+}
+#gui-MusicPlayer .gui-wineRed,
+.gui-MusicPlayer .gui-wineRed {
+--playerColor-1: #fff;
+--playerColor-2: #000;
+--playerColor-3: #a51212;
+--playerColor-4: #c78b8b;
+--playerColor-5: #cf6868;
+--playerColor-6: #b52525;
+--playerColor-7: #8b0000;
+--playerColor-8: #ae0404;
+--playerColor-9: #efefef;
+--playerColor-10: #a20101;
+--playerColor-11: #892828;
+--playerColor-12: #a52a2a;
+--playerColor-rgab-1: rgba(0, 0, 0, 0.3);
+--playerColor-rgab-2: rgba(255, 255, 255, 0.8);
+--playerShadow-1: 2px 2px 5px 0 rgba(139, 0, 0, 0.35);
+--playerShadow-2: -3.5px 3.5px 5px 0px rgba(255, 255, 255, 0.25), inset -3.5px 3.5px 7px 0px rgba(0, 0, 0, .25);
+--playerTextShadow-1: 0 0 1.5px rgba(80, 0, 0, 0.3);
+--playerTextShadow-2: 0 0 1.5px rgba(255, 255, 255, 0.8);
+}
+#gui-MusicPlayer .gui-girlPink,
+.gui-MusicPlayer .gui-girlPink {
+--playerColor-1: #fff;
+--playerColor-2: #000;
+--playerColor-3: #fc7b9e;
+--playerColor-4: #ffccdd;
+--playerColor-5: #fcb1cf;
+--playerColor-6: #ec5f97;
+--playerColor-7: #ffc4d8;
+--playerColor-8: #ff97b3;
+--playerColor-9: #efefef;
+--playerColor-10: #fca0ea;
+--playerColor-11: #fcd0f3;
+--playerColor-12: #fe7ee5;
+--playerColor-rgab-1: rgba(0, 0, 0, 0.3);
+--playerColor-rgab-2: rgba(255, 255, 255, 0.8);
+--playerShadow-1: 2px 2px 5px 0 rgba(255, 192, 203, 0.35);
+--playerShadow-2: -3.5px 3.5px 5px 0px rgba(255, 255, 255, 0.25), inset -3.5px 3.5px 7px 0px rgba(0, 0, 0, .25);
+--playerTextShadow-1: 0 0 1.5px rgba(255, 76, 240, 0.3);
+--playerTextShadow-2: 0 0 1.5px rgba(255, 255, 255, 0.8);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main,
+.gui-MusicPlayer .gui-MusicPlayer-Main {
+--parentWidth: 350;
+--numParentHeight: 135;
+--playerRadius-1: 8px;
+--parentWidthRemoveParty24: calc(350px - 24px);
+--songPictureWidth: calc(135px - 135px / 2.5 - 5px);
+--musicControlWidth: calc(var(--parentWidthRemoveParty24) - var(--songPictureWidth) - 5px);
+--SingingSheetWidth: calc(301.9px);
+position: absolute;
+left: calc(-301.9px);
+bottom: 2em;
+width: var(--parentWidth);
+height: var(--numParentHeight);
+border-top-right-radius: var(--playerRadius-1);
+border-bottom-right-radius: var(--playerRadius-1);
+text-shadow: var(--playerTextShadow-1);
+font-family: '微软雅黑', 'Microsoft YaHei','仿宋', 'FangSong' ;
+z-index: 99;
+transition: all 0.5s;
+cursor: url(../other/default.cur), auto;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .pointer-cursor,
+.gui-MusicPlayer .gui-MusicPlayer-Main .pointer-cursor {
+cursor: url(../other/pointer.cur), auto;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-switchPlayer,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-switchPlayer,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-playerControl li,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-playerControl li,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-audioFrequency,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-audioFrequency,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-totalAudioProgress,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-totalAudioProgress,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-playlistBtn,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-playlistBtn,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-listOfSongs li,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-listOfSongs li {
+cursor: url(../other/pointer.cur), auto;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main ::-webkit-scrollbar,
+.gui-MusicPlayer .gui-MusicPlayer-Main ::-webkit-scrollbar {
+width: 3.5px;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main ::-webkit-scrollbar-thumb,
+.gui-MusicPlayer .gui-MusicPlayer-Main ::-webkit-scrollbar-thumb {
+background-color: transparent;
+border-radius: transparent;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main ::-webkit-scrollbar-track,
+.gui-MusicPlayer .gui-MusicPlayer-Main ::-webkit-scrollbar-track {
+background-color: transparent;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main ::selection,
+.gui-MusicPlayer .gui-MusicPlayer-Main ::selection {
+background-color: var(--playerColor-7);
+color: var(--playerColor-1);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-switchPlayer,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-switchPlayer {
+position: absolute;
+top: 0;
+right: 0;
+height: calc(135px);
+width: calc(24px);
+display: flex;
+align-items: center;
+background-color: var(--playerColor-3);
+color: var(--playerColor-1);
+border-top-right-radius: var(--playerRadius-1);
+border-bottom-right-radius: var(--playerRadius-1);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-switchPlayer .icon-jiantou2,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-switchPlayer .icon-jiantou2 {
+display: block;
+font-size: 1.5em;
+font-weight: bold;
+transition: transform 0.5s;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-switchPlayer .gui-jiantou1,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-switchPlayer .gui-jiantou1 {
+transform: rotate(180deg);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong {
+width: var(--parentWidthRemoveParty24);
+height: calc(135px);
+border-top-right-radius: var(--playerRadius-1);
+border-bottom-right-radius: var(--playerRadius-1);
+background-color: var(--playerColor-1);
+box-shadow: var(--playerShadow-1);
+display: flex;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture {
+width: var(--songPictureWidth);
+height: calc(135px);
+position: relative;
+display: flex;
+align-items: center;
+margin-left: 5px;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-musicPicture,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-musicPicture {
+display: block;
+width: var(--songPictureWidth);
+height: var(--songPictureWidth);
+border: 1px solid var(--playerColor-4);
+border-radius: 100%;
+animation: musicPicture 10s infinite linear;
+}
+@keyframes musicPicture {
+0% {
+transform: rotate(0);
+}
+100% {
+transform: rotate(360deg);
+}
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-pauseRotation,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-pauseRotation {
+animation-play-state: paused;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-musicalNote,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-musicalNote {
+--initializeDistance: 20%;
+--pdyMove: pdyMove 2s linear infinite normal;
+position: absolute;
+z-index: 100;
+opacity: 0;
+font-size: 1.75em;
+animation: var(--pdyMove);
+color: var(--playerColor-10);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-musicalNote:nth-child(2),
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-musicalNote:nth-child(2) {
+color: var(--playerColor-11);
+animation-delay: 0.42s;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-musicalNote:nth-child(3),
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-musicalNote:nth-child(3) {
+color: var(--playerColor-12);
+animation-delay: 0.85s;
+}
+@keyframes pdyMove {
+0% {
+left: var(--initializeDistance);
+top: var(--initializeDistance);
+opacity: 0;
+}
+25% {
+opacity: 0.5;
+transform: rotate(-5deg);
+}
+50% {
+opacity: 1;
+transform: rotate(10deg);
+}
+100% {
+left: 210px;
+top: -90px;
+opacity: 0;
+}
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-pausePdyMove,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-songPicture .gui-pausePdyMove {
+animation-play-state: paused;
+display: none;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl {
+--topControlHeight: calc(135px * (105 / var(--numParentHeight)));
+--bottomControlHeight: calc(135px - var(--topControlHeight));
+--rightSideWidth: calc(var(--musicControlWidth) - 24px);
+--BoxLeftAndRightMargin: 0 0.8em;
+--iconControlSize: 32px;
+width: var(--rightSideWidth);
+height: calc(135px);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl {
+display: flex;
+width: var(--rightSideWidth);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl li,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl li,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl li,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl li {
+list-style: none;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .iconfont,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .iconfont {
+font-size: var(--iconControlSize);
+color: var(--playerColor-4);
+transition: color 0.35s;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .iconfont:hover,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .iconfont:hover {
+color: var(--playerColor-5);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .iconfont:active,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .iconfont:active {
+color: var(--playerColor-6);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl {
+height: var(--topControlHeight);
+flex-direction: column;
+align-items: center;
+justify-content: flex-end;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-introduce,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-introduce {
+--introduceWidth: calc(var(--rightSideWidth) - 30px);
+width: var(--introduceWidth);
+margin: var(--BoxLeftAndRightMargin);
+text-align: center;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-introduce .gui-songName,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-introduce .gui-songName,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-introduce .gui-singer,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-introduce .gui-singer {
+width: var(--introduceWidth);
+text-overflow: ellipsis;
+overflow: hidden;
+word-break: break-all;
+white-space: nowrap;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-introduce .gui-songName,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-introduce .gui-songName {
+color: var(--playerColor-8);
+font-size: 1.5em;
+font-weight: bold;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-introduce .gui-singer,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-introduce .gui-singer {
+font-size: 1em;
+margin-top: 5px;
+color: var(--playerColor-4);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-playerControl,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-playerControl {
+display: flex;
+margin-top: 5px;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-playerControl li,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-playerControl li {
+width: var(--btnSize);
+height: var(--btnSize);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-playerControl .gui-playbackControl,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-playerControl .gui-playbackControl {
+margin: 0 1.5em;
+opacity: 0.5;
+transition: opacity 0.5;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-playerControl .gui-playbackControl:hover,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-topControl .gui-playerControl .gui-playbackControl:hover {
+opacity: 0.8;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl {
+--iconControlSize: 24px;
+--widthAndHeight: 10px;
+height: var(--bottomControlHeight);
+padding: var(--BoxLeftAndRightMargin);
+display: flex;
+justify-content: space-between;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl li,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl li {
+display: flex;
+align-items: center;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar {
+width: 70%;
+padding: 0 5px;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar .gui-totalAudioProgress,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar .gui-totalAudioProgress,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar .gui-totalAudioProgress .gui-audioProgress,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar .gui-totalAudioProgress .gui-audioProgress {
+height: 5px;
+border-radius: var(--playerRadius-1);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar .gui-totalAudioProgress,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar .gui-totalAudioProgress {
+width: 100%;
+background-color: var(--playerColor-4);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar .gui-totalAudioProgress .gui-audioProgress,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar .gui-totalAudioProgress .gui-audioProgress {
+position: relative;
+background-color: var(--playerColor-6);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar .gui-totalAudioProgress .gui-audioProgress::after,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-insideSong .gui-musicControl .gui-bottomControl .gui-progressBar .gui-totalAudioProgress .gui-audioProgress::after {
+content: '';
+position: absolute;
+right: -5px;
+top: 50%;
+transform: translateY(-50%);
+border-radius: 100%;
+width: var(--widthAndHeight);
+height: var(--widthAndHeight);
+background-color: var(--playerColor-1);
+box-shadow: var(--playerShadow-1);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList {
+--distance10px: 10px;
+height: 0;
+width: var(--SingingSheetWidth);
+background-color: var(--playerColor-1);
+box-shadow: var(--playerShadow-1);
+border-bottom-right-radius: var(--playerRadius-1);
+overflow-y: auto;
+overflow-x: hidden;
+transition: height 0.5s;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList:hover::-webkit-scrollbar-thumb,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList:hover::-webkit-scrollbar-thumb,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList:active::-webkit-scrollbar-thumb,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList:active::-webkit-scrollbar-thumb {
+background-color: var(--playerColor-3);
+border-radius: var(--playerRadius-1);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList:hover::-webkit-scrollbar-track,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList:hover::-webkit-scrollbar-track,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList:active::-webkit-scrollbar-track,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList:active::-webkit-scrollbar-track {
+background-color: var(--playerColor-4);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs {
+padding: var(--distance10px);
+overflow: hidden;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem {
+--songsItemHeight: calc((350px - 20px) / 4);
+--imgBoxSize: 50px;
+--songInformationWidth: calc(var(--SingingSheetWidth) - var(--imgBoxSize) - 20px - var(--distance10px));
+height: var(--songsItemHeight);
+width: 100%;
+list-style: none;
+display: flex;
+align-items: center;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem:hover .gui-playlistSongInformation .gui-songTitle .gui-songName,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem:hover .gui-playlistSongInformation .gui-songTitle .gui-songName {
+color: var(--playerColor-6);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songAuthor,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songAuthor {
+color: var(--playerColor-6);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songLength,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songLength,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .icon-shijian,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .icon-shijian {
+color: var(--playerColor-6);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-songListSongPictures,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-songListSongPictures {
+position: relative;
+width: var(--imgBoxSize);
+height: var(--imgBoxSize);
+margin-left: var(--distance10px);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-songListSongPictures .gui-songIcon,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-songListSongPictures .gui-songIcon {
+position: absolute;
+left: 0;
+top: -1.5px;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+background-color: var(--playerColor-rgab-1);
+font-size: 1.5em;
+color: var(--playerColor-rgab-2);
+text-align: center;
+line-height: var(--imgBoxSize);
+z-index: 100;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-songListSongPictures .gui-playlistImg,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-songListSongPictures .gui-playlistImg {
+display: block;
+width: 100%;
+border-radius: 100%;
+overflow: hidden;
+transition: transform 0.5s;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation {
+width: var(--songInformationWidth);
+margin-left: var(--distance10px);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation .gui-songTitle,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation .gui-songTitle {
+--songTitleNameTransition: color 0.35s;
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation .gui-songTitle .gui-songName,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation .gui-songTitle .gui-songName {
+color: var(--playerColor-5);
+font-size: 1em;
+font-weight: bold;
+margin-bottom: 0.8em;
+word-break: break-all;
+overflow: hidden;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+transition: var(--songTitleNameTransition);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration {
+display: flex;
+justify-content: space-between;
+padding-right: var(--distance10px);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songAuthor,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songAuthor,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songLength,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-songsItem .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songLength {
+color: var(--playerColor-4);
+font-size: 14px;
+text-overflow: ellipsis;
+overflow: hidden;
+word-break: break-all;
+white-space: nowrap;
+transition: var(--songTitleNameTransition);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution {
+border-radius: var(--playerRadius-1);
+background-color: var(--playerColor-5);
+border: none;
+text-shadow: var(--playerTextShadow-2);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution .gui-songListSongPictures .gui-playlistImg,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution .gui-songListSongPictures .gui-playlistImg {
+border: 2px solid var(--playerColor-1);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution:hover .gui-playlistSongInformation .gui-songTitle .gui-songName,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution:hover .gui-playlistSongInformation .gui-songTitle .gui-songName {
+color: var(--playerColor-1);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songAuthor,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songAuthor {
+color: var(--playerColor-1);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songLength,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songLength,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .icon-shijian,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution:hover .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .icon-shijian {
+color: var(--playerColor-1);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution .gui-playlistSongInformation .gui-songTitle .gui-songName,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution .gui-playlistSongInformation .gui-songTitle .gui-songName {
+color: var(--playerColor-1);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songAuthor,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songAuthor,
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songLength,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongList .gui-listOfSongs .gui-inExecution .gui-playlistSongInformation .gui-songTitle .gui-authorAndDuration .gui-songLength {
+color: var(--playerColor-9);
+}
+#gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongListShow,
+.gui-MusicPlayer .gui-MusicPlayer-Main .gui-outsideSongListShow {
+height: calc(350px);
+}
+#gui-MusicPlayer .gui-playerShow,
+.gui-MusicPlayer .gui-playerShow {
+left: 0;
+}
+.gui-singleLineEllipsis {
+text-overflow: ellipsis;
+overflow: hidden;
+word-break: break-all;
+white-space: nowrap;
+}
+#gui-lyric,
+.gui-music-pop,
+.gui-throughDisplay,
+.gui-lyricHidden {
+font-size: 16px !important;
+--color-1: #fff;
+--color-2: #000;
+--color-3: #ffc0cb;
+--color-4: rgba(0, 0, 0, 0.75);
+--blur-5: blur(5px);
+--text-shadow-1: 1px 1px 1px var(--color-2);
+--transition-1: left 1s ease 0s;
+--z-index-100: 1809185784;
+--height-1: 1.75em;
+--height-2: -1.75em;
+font-family: '仿宋', 'FangSong', '微软雅黑', 'Microsoft YaHei';
+}
+#gui-lyric li,
+.gui-music-pop li,
+.gui-throughDisplay li,
+.gui-lyricHidden li {
+list-style: none;
+}
+#gui-lyric *,
+.gui-music-pop *,
+.gui-throughDisplay *,
+.gui-lyricHidden * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+-webkit-tap-highlight-color: transparent;
+}
+#gui-lyric ::selection,
+.gui-music-pop ::selection,
+.gui-throughDisplay ::selection,
+.gui-lyricHidden ::selection {
+background-color: var(--color-3);
+color: var(--color-1);
+}
+#gui-lyric {
+--width-100B: 100%;
+position: fixed;
+left: 0;
+width: var(--width-100B);
+height: var(--height-1);
+backdrop-filter: var(--blur-5);
+z-index: var(--z-index-100);
+overflow: hidden;
+transition: all 0.5s;
+cursor: url(../other/default.cur), auto;
+}
+#gui-lyric:hover {
+height: 2.5em;
+}
+#gui-lyric .gui-AllLyric-box {
+position: relative;
+width: 100%;
+height: 100%;
+}
+#gui-lyric .gui-AllLyric-box .gui-ly {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%) scale(0);
+width: calc(var(--width-100B) - 20%);
+line-height: var(--height-1);
+color: var(--color-1);
+text-align: center;
+font-size: 1em;
+font-weight: 600;
+text-shadow: var(--text-shadow-1);
+text-overflow: ellipsis;
+overflow: hidden;
+word-break: break-all;
+white-space: nowrap;
+opacity: 0;
+transition: all 0.5s;
+}
+#gui-lyric .gui-AllLyric-box .gui-textShow {
+opacity: 1;
+transform: translate(-50%, -50%) scale(1);
+}
+.gui-lyricHidden {
+bottom: var(--height-2);
+}
+.gui-lyricShow {
+bottom: 0;
+}
+.gui-music-pop {
+width: 12em;
+padding: 12px 15px;
+color: var(--color-1);
+font-size: 1em;
+font-weight: bold;
+position: fixed;
+top: 1em;
+left: -100%;
+z-index: var(--z-index-100);
+text-overflow: ellipsis;
+overflow: hidden;
+word-break: break-all;
+white-space: nowrap;
+backdrop-filter: var(--blur-5);
+transition: var(--transition-1);
+}
+.gui-throughDisplay {
+position: absolute;
+background-color: var(--color-4);
+backdrop-filter: var(--blur-5);
+color: var(--color-1);
+font-size: 0.8em;
+padding: 5px 10px;
+border-radius: 3px;
+z-index: var(--z-index-100);
+display: none;
+}
