@@ -155,26 +155,8 @@ text-shadow: var(--playerTextShadow-1);
 font-family: '微软雅黑', 'Microsoft YaHei','仿宋', 'FangSong' ;
 z-index: 99;
 transition: all 0.5s;
-cursor: url(../other/default.cur), auto;
 }
-#gui-MusicPlayer .gui-MusicPlayer-Main .pointer-cursor,
-.gui-MusicPlayer .gui-MusicPlayer-Main .pointer-cursor {
-cursor: url(../other/pointer.cur), auto;
-}
-#gui-MusicPlayer .gui-MusicPlayer-Main .gui-switchPlayer,
-.gui-MusicPlayer .gui-MusicPlayer-Main .gui-switchPlayer,
-#gui-MusicPlayer .gui-MusicPlayer-Main .gui-playerControl li,
-.gui-MusicPlayer .gui-MusicPlayer-Main .gui-playerControl li,
-#gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-audioFrequency,
-.gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-audioFrequency,
-#gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-totalAudioProgress,
-.gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-totalAudioProgress,
-#gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-playlistBtn,
-.gui-MusicPlayer .gui-MusicPlayer-Main .gui-bottomControl .gui-playlistBtn,
-#gui-MusicPlayer .gui-MusicPlayer-Main .gui-listOfSongs li,
-.gui-MusicPlayer .gui-MusicPlayer-Main .gui-listOfSongs li {
-cursor: url(../other/pointer.cur), auto;
-}
+
 #gui-MusicPlayer .gui-MusicPlayer-Main ::-webkit-scrollbar,
 .gui-MusicPlayer .gui-MusicPlayer-Main ::-webkit-scrollbar {
 width: 3.5px;
@@ -669,7 +651,7 @@ backdrop-filter: var(--blur-5);
 z-index: var(--z-index-100);
 overflow: hidden;
 transition: all 0.5s;
-cursor: url(../other/default.cur), auto;
+
 }
 #gui-lyric:hover {
 height: 2.5em;
