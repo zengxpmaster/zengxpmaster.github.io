@@ -1,1 +1,0 @@
-$('body').css('overflow-x', 'hidden').css('margin', '0').css('padding', '0');$(document).ready(function() {$("canvas.snow").let_it_snow();});

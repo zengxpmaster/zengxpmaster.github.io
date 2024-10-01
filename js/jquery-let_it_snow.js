@@ -15,13 +15,13 @@
 !function($){
   
   var defaults = {
-    speed: 0,
+    speed: 1,
     interaction: true,
     size: 2,
     count: 200,
     opacity: 0,
     color: "#ffffff",
-    windPower: 0,
+    windPower: 5,
     image: false
 	};
 	
