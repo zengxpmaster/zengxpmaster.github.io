@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/logo.png">
-  <link rel="icon" href="/img/logo.png">
+  <link rel="icon" href="/img/logo-dark.png">
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -21,10 +21,12 @@
   <meta name="author" content="zengxpmaster">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="zengxp&#39;s Blog">
+    <meta name="description" content="冯虚御风浩浩乎，遗世独立飘飘乎">
+<meta property="og:type" content="website">
+<meta property="og:title" content="天地蜉蝣">
 <meta property="og:url" content="https://zengxpmaster.github.io/">
-<meta property="og:site_name" content="zengxp&#39;s Blog">
+<meta property="og:site_name" content="天地蜉蝣">
+<meta property="og:description" content="冯虚御风浩浩乎，遗世独立飘飘乎">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="zengxpmaster">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,7 +35,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>zengxp&#39;s Blog</title>
+  <title>天地蜉蝣</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -65,7 +67,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zengxpmaster.github.io","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-05-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zengxpmaster.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-05-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -78,7 +80,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="zengxp's Blog" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="天地蜉蝣" type="application/atom+xml">
 </head>
 
 
@@ -99,7 +101,7 @@
   <div class="container">
     <a class="navbar-brand" href="/">
       <div >
-        <img src="/img/logo.png" srcset="/img/loading.gif" lazyload alt="logo" height="40"> <strong>Blog</strong></div>
+        <img src="./img/logo-dark.png" srcset="/img/loading.gif" lazyload alt="logo" height="40"><strong> 天地蜉蝣</strong></div>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -123,6 +125,7 @@
               </a>
             </li>
           
+          
         
           
           
@@ -135,17 +138,6 @@
               </a>
             </li>
           
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
           
         
           
@@ -159,6 +151,7 @@
               </a>
             </li>
           
+          
         
           
           
@@ -171,7 +164,16 @@
               </a>
             </li>
           
+          
         
+        
+        
+        
+          <li class="nav-item" id="rss-btn">
+            <a class="nav-link" target="_blank" href="./atom.xml" >
+              <i class="iconfont icon-rss"></i>
+            </a>
+          </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
@@ -194,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle"></span>
+            <span id="subtitle" data-typed-text="朝菌不知晦朔，蟪蛄不知春秋"></span>
           
         </div>
 
@@ -225,6 +227,60 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024-10/%E8%BF%91%E5%86%B5%E8%AF%B4%E6%98%8E.html" target="_self">
+          近况说明
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024-10/%E8%BF%91%E5%86%B5%E8%AF%B4%E6%98%8E.html" target="_self">
+        <div>
+          好久没更新了ㅤ这条post主要讲讲 该网站的发展，最近发生在我身上的事，以及以后的更新频率
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-04 00:02" pubdate>
+              2024-10-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%94%9F%E6%B4%BB/" class="category-chain-item">生活</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
 
   <div class="row mx-auto index-card">
     
@@ -383,7 +439,7 @@
                     zengxpmaster
                     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank"
                     rel="nofollow">CC BY-NC-SA 4.0</a>ㅤ
-                  Powered by <a href="https://pages.github.com/" target="_blank">Github Page</a>  & <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+                  Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>  & <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
                      <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
   
@@ -502,6 +558,21 @@
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
 
 
 

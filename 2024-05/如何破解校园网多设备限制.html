@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/img/logo.png">
-  <link rel="icon" href="/img/logo.png">
+  <link rel="icon" href="/img/logo-dark.png">
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -25,11 +25,11 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何破解校园网多设备限制">
 <meta property="og:url" content="https://zengxpmaster.github.io/2024-05/%E5%A6%82%E4%BD%95%E7%A0%B4%E8%A7%A3%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%A4%9A%E8%AE%BE%E5%A4%87%E9%99%90%E5%88%B6.html">
-<meta property="og:site_name" content="zengxp&#39;s Blog">
+<meta property="og:site_name" content="天地蜉蝣">
 <meta property="og:description" content="理解校园网检测多设备原理ㅤ使用 OpenWrt 破除校园网多设备限制">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-11T04:00:00.000Z">
-<meta property="article:modified_time" content="2024-10-01T18:50:24.021Z">
+<meta property="article:modified_time" content="2024-10-02T16:02:19.000Z">
 <meta property="article:author" content="zengxpmaster">
 <meta property="article:tag" content="OpenWrt">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>如何破解校园网多设备限制 - zengxp&#39;s Blog</title>
+  <title>如何破解校园网多设备限制 - 天地蜉蝣</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -47,6 +47,8 @@
   <link  rel="stylesheet" href="/css/github-markdown.min.css" />
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.net/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
 
@@ -76,7 +78,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zengxpmaster.github.io","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-05-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zengxpmaster.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-05-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -89,7 +91,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="zengxp's Blog" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="天地蜉蝣" type="application/atom+xml">
 </head>
 
 
@@ -110,7 +112,7 @@
   <div class="container">
     <a class="navbar-brand" href="/">
       <div >
-        <img src="/img/logo.png" srcset="/img/loading.gif" lazyload alt="logo" height="40"> <strong>Blog</strong></div>
+        <img src="./img/logo-dark.png" srcset="/img/loading.gif" lazyload alt="logo" height="40"><strong> 天地蜉蝣</strong></div>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -134,6 +136,7 @@
               </a>
             </li>
           
+          
         
           
           
@@ -146,17 +149,6 @@
               </a>
             </li>
           
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
           
         
           
@@ -170,6 +162,7 @@
               </a>
             </li>
           
+          
         
           
           
@@ -182,7 +175,16 @@
               </a>
             </li>
           
+          
         
+        
+        
+        
+          <li class="nav-item" id="rss-btn">
+            <a class="nav-link" target="_blank" href="./atom.xml" >
+              <i class="iconfont icon-rss"></i>
+            </a>
+          </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
@@ -205,7 +207,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">如何破解校园网多设备限制</span>
+            <span id="subtitle" data-typed-text="如何破解校园网多设备限制"></span>
           
         </div>
 
@@ -217,7 +219,7 @@
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2024-05-11 12:00" pubdate>
-          2024年5月11日 中午
+          2024年5月11日 12:00 中午
         </time>
       </span>
     
@@ -312,19 +314,19 @@
     
       
       
-        <a href="/2024-05/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" title="如何搭建个人博客"
+        <a href="/2024-05/%E5%A6%82%E4%BD%95%E7%A0%B4%E8%A7%A3%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%A4%9A%E8%AE%BE%E5%A4%87%E9%99%90%E5%88%B6.html" title="如何破解校园网多设备限制"
            class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">如何搭建个人博客</span>
+           active">
+          <span class="category-post">如何破解校园网多设备限制</span>
         </a>
       
     
       
       
-        <a href="/2024-05/%E5%A6%82%E4%BD%95%E7%A0%B4%E8%A7%A3%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%A4%9A%E8%AE%BE%E5%A4%87%E9%99%90%E5%88%B6.html" title="如何破解校园网多设备限制"
+        <a href="/2024-05/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" title="如何搭建个人博客"
            class="list-group-item list-group-item-action
-           active">
-          <span class="category-post">如何破解校园网多设备限制</span>
+           ">
+          <span class="category-post">如何搭建个人博客</span>
         </a>
       
     
@@ -348,6 +350,14 @@
           <article class="post-content mx-auto">
             <h1 id="seo-header">如何破解校园网多设备限制</h1>
             
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年10月3日 00:02
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
@@ -357,17 +367,17 @@
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>文章引用 <u>SunBK201</u> 大佬 <a target="_blank" rel="noopener" href="https://www.sunbk201.site/posts/crack-campus-network/">校园网共享上网检测机制的研究与解决方案</a><br><a target="_blank" rel="noopener" href="https://www.sunbk201.site/posts/crack-campus-network/">https://www.sunbk201.site/posts/crack-campus-network/</a></p>
 </blockquote>
-<blockquote>
- <p style="color:#fb4b00">CAUTION</p>
- <small>本条推文非教程向，<big><del>网络巨婴</del></big>请自觉离开</small>
-</blockquote>
+<div class="note note-danger">
+            <p style="color:#fb4b00">CAUTION</p><small>本条推文非教程向，<big><del>网络巨婴</del></big>请自觉离开</small>
+          </div>
+
 <p>校园网，禁止单一账号下多设备同时访问互联网。</p>
 <h2 id="本校校园网网络环境的说明"><a href="#本校校园网网络环境的说明" class="headerlink" title="本校校园网网络环境的说明"></a>本校校园网网络环境的说明</h2><ul>
 <li>校园网网络硬件设备：锐捷三层交换机（目前已知）</li>
 <li>校园网认证系统：Dr.com Web Portal 认证</li>
 <li>校园网网络防火墙安全方案：深信服</li>
 </ul>
-<h1 id="校园网共享上网检测机制"><a href="#校园网共享上网检测机制" class="headerlink" title="校园网共享上网检测机制"></a>校园网共享上网检测机制</h1><p>目前已知的（可能）存在的有：</p>
+<h1 id="校园网共享上网检测机制-1"><a href="#校园网共享上网检测机制-1" class="headerlink" title="校园网共享上网检测机制[1]"></a>校园网共享上网检测机制<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="网络上看到的，先辈们总结的。">[1]</span></a></sup></h1><p>目前已知的（可能）存在的有：</p>
 <ul>
 <li>基于 IPv4 数据包包头内的 TTL 字段的检测</li>
 <li>基于 HTTP 数据包请求头内的 User-Agent 字段的检测</li>
@@ -383,7 +393,8 @@
 <p>不同的操作系统的默认 TTL 值是不同的，Windows 是 128， macOS&#x2F;iOS、Linux 是 64。</p>
 <p>因此如果我们自己接入路由器到校园网，我们的通过路由器的数据包会变为 127 或 63，一旦校园网抓包检测到这种数据包TTL不是128或64，就会判定为用户接入了路由器。</p>
 <h2 id="基于-HTTP-数据包请求头内的-User-Agent-字段的检测"><a href="#基于-HTTP-数据包请求头内的-User-Agent-字段的检测" class="headerlink" title="基于 HTTP 数据包请求头内的 User-Agent 字段的检测"></a>基于 HTTP 数据包请求头内的 User-Agent 字段的检测</h2><p>HTTP 数据包请求头存在一个叫做 User-Agent 的字段，该字段通常能够标识出操作系统类型，例如：</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">Mozilla</span>/<span class="hljs-number">5</span>.<span class="hljs-number">0</span> (Windows NT <span class="hljs-number">10</span>.<span class="hljs-number">0</span>; Win64; x64) AppleWebKit/<span class="hljs-number">537</span>.<span class="hljs-number">36</span> (KHTML, like Gecko) Chrome/<span class="hljs-number">89</span>.<span class="hljs-number">0</span>.<span class="hljs-number">4389</span>.<span class="hljs-number">72</span> Safari/<span class="hljs-number">537</span>.<span class="hljs-number">36</span> Edg/<span class="hljs-number">89.0.774.45</span><br><span class="hljs-attribute">Mozilla</span>/<span class="hljs-number">5</span>.<span class="hljs-number">0</span> (iPad; U; CPU OS <span class="hljs-number">3</span>_2_1 like Mac OS X; en-us) AppleWebKit/<span class="hljs-number">531</span>.<span class="hljs-number">21</span>.<span class="hljs-number">10</span> (KHTML, like Gecko) Mobile/<span class="hljs-number">7</span>B405<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-Apache" data-language="Apache"><code class="language-Apache">Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;89.0.4389.72 Safari&#x2F;537.36 Edg&#x2F;89.0.774.45
+Mozilla&#x2F;5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit&#x2F;531.21.10 (KHTML, like Gecko) Mobile&#x2F;7B405</code></pre></div></figure>
 
 <p>校园网会通过多次抓包检测此字段，若发现同时出现例如Windows NT 10.0 iPad 的字段，则判定存在多设备上网。</p>
 <h2 id="DPI-Deep-Packet-Inspection-深度包检测技术"><a href="#DPI-Deep-Packet-Inspection-深度包检测技术" class="headerlink" title="DPI (Deep Packet Inspection) 深度包检测技术"></a>DPI (Deep Packet Inspection) 深度包检测技术</h2><p>这个检测方案比较先进，检测系统会抓包分析应用层的流量，根据不同应用程序的数据包的特征值来判断出是否存在多设备上网。</p>
@@ -399,7 +410,10 @@
 <h1 id="防共享上网检测的解决方案"><a href="#防共享上网检测的解决方案" class="headerlink" title="防共享上网检测的解决方案"></a>防共享上网检测的解决方案</h1><p>对于校园网重重的检测，我们似乎已经不可能从终端级提出一个完美的解决方案，因此，下面的解决方案都是基于网关级的。简单来说，我们需要在路由器上动手脚。</p>
 <p>路由器固件我们选择 OpenWrt，这是一个开源的路由器系统，允许我们自定义其系统内核以及添加自定义插件。</p>
 <h2 id="针对基于-IPv4-数据包包头内的-TTL-字段的检测的解决方案"><a href="#针对基于-IPv4-数据包包头内的-TTL-字段的检测的解决方案" class="headerlink" title="针对基于 IPv4 数据包包头内的 TTL 字段的检测的解决方案"></a>针对基于 IPv4 数据包包头内的 TTL 字段的检测的解决方案</h2><p>应对思路很简单：修改 TTL 为固定值。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 在 OpenWrt 上安装必要的软件包</span><br>opkg update &amp;&amp; opkg install iptables-mod-ipopt kmod-ipt-ipopt<br><span class="hljs-comment"># 加入以下防火墙规则</span><br>iptables -t mangle -A POSTROUTING -j TTL --ttl-set 64<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># 在 OpenWrt 上安装必要的软件包
+opkg update &amp;&amp; opkg install iptables-mod-ipopt kmod-ipt-ipopt</code></pre></div></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-Apache" data-language="Apache"><code class="language-Apache"># 加入以下防火墙规则
+iptables -t mangle -A POSTROUTING -j TTL --ttl-set 64</code></pre></div></figure>
 
 <h2 id="针对基于-HTTP-数据包请求头内的-User-Agent-字段的检测的解决方案"><a href="#针对基于-HTTP-数据包请求头内的-User-Agent-字段的检测的解决方案" class="headerlink" title="针对基于 HTTP 数据包请求头内的 User-Agent 字段的检测的解决方案"></a>针对基于 HTTP 数据包请求头内的 User-Agent 字段的检测的解决方案</h2><p>应对思路：统一所有终端的 User-Agent </p>
 <p>这一点实现起来有点困难，目前实测有三种解决方案。</p>
@@ -410,35 +424,93 @@
 <p>如果不想在自己的终端上长时间开启代理，可以在 OpenWrt 中使用 OpenClash 或 ShellClash 进行网关级修改。</p>
 <h2 id="针对基于-IPv4-数据包包头内的-Identification-字段的检测的解决方案"><a href="#针对基于-IPv4-数据包包头内的-Identification-字段的检测的解决方案" class="headerlink" title="针对基于 IPv4 数据包包头内的 Identification 字段的检测的解决方案"></a>针对基于 IPv4 数据包包头内的 Identification 字段的检测的解决方案</h2><p>应对思路：修改所有数据包的 ID 字段为递增。</p>
 <p>我们使用 <a target="_blank" rel="noopener" href="https://github.com/CHN-beta/rkp-ipid">rkp-ipid</a> 这一内核模块进行修改。<br>进入 OpenWrt 防火墙设置，在 自定义设置 中填入以下内容:</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 设置所有发出的数据包的 IPID 为递增</span><br><span class="hljs-attribute">iptables</span> -t mangle -N IPID_MOD<br><span class="hljs-attribute">iptables</span> -t mangle -A FORWARD -j IPID_MOD<br><span class="hljs-attribute">iptables</span> -t mangle -A OUTPUT -j IPID_MOD<br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -d <span class="hljs-number">0.0.0.0</span>/<span class="hljs-number">8</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -d <span class="hljs-number">127.0.0.0</span>/<span class="hljs-number">8</span> -j RETURN<br><span class="hljs-comment"># iptables -t mangle -A IPID_MOD -d 10.0.0.0/8 -j RETURN</span><br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -d <span class="hljs-number">172.16.0.0</span>/<span class="hljs-number">12</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -d <span class="hljs-number">192.168.0.0</span>/<span class="hljs-number">16</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -d <span class="hljs-number">255.0.0.0</span>/<span class="hljs-number">8</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -j MARK --set-xmark <span class="hljs-number">0</span>x10/<span class="hljs-number">0</span>x10<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-Apache" data-language="Apache"><code class="language-Apache"># 设置所有发出的数据包的 IPID 为递增
+iptables -t mangle -N IPID_MOD
+iptables -t mangle -A FORWARD -j IPID_MOD
+iptables -t mangle -A OUTPUT -j IPID_MOD
+iptables -t mangle -A IPID_MOD -d 0.0.0.0&#x2F;8 -j RETURN
+iptables -t mangle -A IPID_MOD -d 127.0.0.0&#x2F;8 -j RETURN
+# iptables -t mangle -A IPID_MOD -d 10.0.0.0&#x2F;8 -j RETURN
+iptables -t mangle -A IPID_MOD -d 172.16.0.0&#x2F;12 -j RETURN
+iptables -t mangle -A IPID_MOD -d 192.168.0.0&#x2F;16 -j RETURN
+iptables -t mangle -A IPID_MOD -d 255.0.0.0&#x2F;8 -j RETURN
+iptables -t mangle -A IPID_MOD -j MARK --set-xmark 0x10&#x2F;0x10</code></pre></div></figure>
 
 <h2 id="针对基于网络协议栈时钟偏移的检测技术的解决方案"><a href="#针对基于网络协议栈时钟偏移的检测技术的解决方案" class="headerlink" title="针对基于网络协议栈时钟偏移的检测技术的解决方案"></a>针对基于网络协议栈时钟偏移的检测技术的解决方案</h2><p>应对思路：在局域网中建立 NTP 服务器统一时间戳</p>
 <p>进入 OpenWrt 系统设置, 勾选 Enable NTP client（启用 NTP 客户端）和 Provide NTP server（作为 NTP 服务器提供服务）</p>
 <p>NTP server candidates（候选 NTP 服务器）四个框框分别填写:</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">ntp1<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span>, time1<span class="hljs-selector-class">.cloud</span><span class="hljs-selector-class">.tencent</span><span class="hljs-selector-class">.com</span>, stdtime<span class="hljs-selector-class">.gov</span><span class="hljs-selector-class">.hk</span>, pool<span class="hljs-selector-class">.ntp</span>.org<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">ntp1.aliyun.com, time1.cloud.tencent.com, stdtime.gov.hk, pool.ntp.org</code></pre></div></figure>
 
 <p>进入 OpenWrt 防火墙设置，在 自定义设置 中填入以下内容:</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 防时钟偏移检测</span><br><span class="hljs-attribute">iptables</span> -t nat -N ntp_force_local<br><span class="hljs-attribute">iptables</span> -t nat -I PREROUTING -p udp --dport <span class="hljs-number">123</span> -j ntp_force_local<br><span class="hljs-attribute">iptables</span> -t nat -A ntp_force_local -d <span class="hljs-number">0.0.0.0</span>/<span class="hljs-number">8</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t nat -A ntp_force_local -d <span class="hljs-number">127.0.0.0</span>/<span class="hljs-number">8</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t nat -A ntp_force_local -d <span class="hljs-number">192.168.0.0</span>/<span class="hljs-number">16</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t nat -A ntp_force_local -s <span class="hljs-number">192.168.0.0</span>/<span class="hljs-number">16</span> -j DNAT --to-destination <span class="hljs-number">192.168.1.1</span><br><span class="hljs-comment"># 最后的 192.168.1.1 需要修改为路由器网关地址</span><br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-Apache" data-language="Apache"><code class="language-Apache"># 防时钟偏移检测
+iptables -t nat -N ntp_force_local
+iptables -t nat -I PREROUTING -p udp --dport 123 -j ntp_force_local
+iptables -t nat -A ntp_force_local -d 0.0.0.0&#x2F;8 -j RETURN
+iptables -t nat -A ntp_force_local -d 127.0.0.0&#x2F;8 -j RETURN
+iptables -t nat -A ntp_force_local -d 192.168.0.0&#x2F;16 -j RETURN
+iptables -t nat -A ntp_force_local -s 192.168.0.0&#x2F;16 -j DNAT --to-destination 192.168.1.1
+# 最后的 192.168.1.1 需要修改为路由器网关地址</code></pre></div></figure>
 
 <h2 id="针对-Flash-Cookie-检测技术的解决方案"><a href="#针对-Flash-Cookie-检测技术的解决方案" class="headerlink" title="针对 Flash Cookie 检测技术的解决方案"></a>针对 Flash Cookie 检测技术的解决方案</h2><p>应对思路：iptables 拒绝 AC 进行 Flash 检测<br>进入 OpenWrt 防火墙设置，在 自定义设置 中填入以下内容:</p>
-<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dsconfig"><span class="hljs-comment"># iptables 拒绝 AC 进行 Flash 检测</span><br><span class="hljs-string">iptables</span> -<span class="hljs-string">I</span> <span class="hljs-string">FORWARD</span> -<span class="hljs-string">p</span> <span class="hljs-string">tcp</span> <span class="hljs-built_in">--sport</span> <span class="hljs-string">80</span> <span class="hljs-built_in">--tcp-flags</span> <span class="hljs-string">ACK</span> <span class="hljs-string">ACK</span> -<span class="hljs-string">m</span> <span class="hljs-string">string</span> <span class="hljs-built_in">--algo</span> <span class="hljs-string">bm</span> <span class="hljs-built_in">--string</span> <span class="hljs-string">&quot; src=\&quot;</span><span class="hljs-string">http</span>://<span class="hljs-string">1</span>.<span class="hljs-string">1</span>.<span class="hljs-string">1</span>.<span class="hljs-string">&quot; -j DROP</span><br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-Apache" data-language="Apache"><code class="language-Apache"># iptables 拒绝 AC 进行 Flash 检测
+iptables -I FORWARD -p tcp --sport 80 --tcp-flags ACK ACK -m string --algo bm --string &quot; src&#x3D;\&quot;http:&#x2F;&#x2F;1.1.1.&quot; -j DROP</code></pre></div></figure>
 
 <h2 id="针对-DPI-Deep-Packet-Inspection-深度包检测技术的解决方案"><a href="#针对-DPI-Deep-Packet-Inspection-深度包检测技术的解决方案" class="headerlink" title="针对 DPI (Deep Packet Inspection) 深度包检测技术的解决方案"></a>针对 DPI (Deep Packet Inspection) 深度包检测技术的解决方案</h2><p>应对思路：加密数据包。</p>
 <p>我们无法通过修改数据包来防止 DPI 检测，因此加密是最好的手段。</p>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>对于认为修改 UA IPID 太过麻烦的同学，可以直接对自己的流量进行全加密，前提是你的有充足的加密解密代理服务器</p>
 <p>下面我给出最终全部的配置脚本：</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># @SunBK201 - https://blog.sunbk201.site</span><br><span class="hljs-attribute">iptables</span> -t nat -A PREROUTING -p udp --dport <span class="hljs-number">53</span> -j REDIRECT --to-ports <span class="hljs-number">53</span><br><span class="hljs-attribute">iptables</span> -t nat -A PREROUTING -p tcp --dport <span class="hljs-number">53</span> -j REDIRECT --to-ports <span class="hljs-number">53</span><br><br><span class="hljs-comment"># 通过 rkp-ipid 设置 IPID</span><br><span class="hljs-attribute">iptables</span> -t mangle -N IPID_MOD<br><span class="hljs-attribute">iptables</span> -t mangle -A FORWARD -j IPID_MOD<br><span class="hljs-attribute">iptables</span> -t mangle -A OUTPUT -j IPID_MOD<br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -d <span class="hljs-number">0.0.0.0</span>/<span class="hljs-number">8</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -d <span class="hljs-number">127.0.0.0</span>/<span class="hljs-number">8</span> -j RETURN<br><span class="hljs-comment"># 由于本校局域网是A类网，所以我将这一条注释掉了，具体要不要注释结合你所在的校园网</span><br><span class="hljs-comment"># iptables -t mangle -A IPID_MOD -d 10.0.0.0/8 -j RETURN</span><br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -d <span class="hljs-number">172.16.0.0</span>/<span class="hljs-number">12</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -d <span class="hljs-number">192.168.0.0</span>/<span class="hljs-number">16</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -d <span class="hljs-number">255.0.0.0</span>/<span class="hljs-number">8</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t mangle -A IPID_MOD -j MARK --set-xmark <span class="hljs-number">0</span>x10/<span class="hljs-number">0</span>x10<br><br><span class="hljs-comment"># ua2f 改UA</span><br><span class="hljs-attribute">iptables</span> -t mangle -N ua2f<br><span class="hljs-comment"># 由于本校局域网是A类网，所以我将这一条注释掉了，具体要不要注释结合你所在的校园网</span><br><span class="hljs-comment"># iptables -t mangle -A ua2f -d 10.0.0.0/8 -j RETURN</span><br><span class="hljs-attribute">iptables</span> -t mangle -A ua2f -d <span class="hljs-number">127.0.0.0</span>/<span class="hljs-number">8</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t mangle -A ua2f -d <span class="hljs-number">192.168.0.0</span>/<span class="hljs-number">16</span> -j RETURN # 不处理流向保留地址的包<br><span class="hljs-attribute">iptables</span> -t mangle -A ua2f -p tcp --dport <span class="hljs-number">443</span> -j RETURN # 不处理 https<br><span class="hljs-attribute">iptables</span> -t mangle -A ua2f -p tcp --dport <span class="hljs-number">22</span> -j RETURN # 不处理 SSH <br><span class="hljs-attribute">iptables</span> -t mangle -A ua2f -p tcp --dport <span class="hljs-number">80</span> -j CONNMARK --set-mark <span class="hljs-number">44</span><br><span class="hljs-attribute">iptables</span> -t mangle -A ua2f -m connmark --mark <span class="hljs-number">43</span> -j RETURN # 不处理标记为非 http 的流 (实验性)<br><span class="hljs-attribute">iptables</span> -t mangle -A ua2f -m set --set nohttp dst,dst -j RETURN<br><span class="hljs-attribute">iptables</span> -t mangle -A ua2f -j NFQUEUE --queue-num <span class="hljs-number">10010</span><br>  <br><span class="hljs-attribute">iptables</span> -t mangle -A FORWARD -p tcp -m conntrack --ctdir ORIGINAL -j ua2f<br><span class="hljs-attribute">iptables</span> -t mangle -A FORWARD -p tcp -m conntrack --ctdir REPLY<br><br><br><span class="hljs-comment"># 防时钟偏移检测</span><br><span class="hljs-attribute">iptables</span> -t nat -N ntp_force_local<br><span class="hljs-attribute">iptables</span> -t nat -I PREROUTING -p udp --dport <span class="hljs-number">123</span> -j ntp_force_local<br><span class="hljs-attribute">iptables</span> -t nat -A ntp_force_local -d <span class="hljs-number">0.0.0.0</span>/<span class="hljs-number">8</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t nat -A ntp_force_local -d <span class="hljs-number">127.0.0.0</span>/<span class="hljs-number">8</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t nat -A ntp_force_local -d <span class="hljs-number">192.168.0.0</span>/<span class="hljs-number">16</span> -j RETURN<br><span class="hljs-attribute">iptables</span> -t nat -A ntp_force_local -s <span class="hljs-number">192.168.0.0</span>/<span class="hljs-number">16</span> -j DNAT --to-destination <span class="hljs-number">192.168.1.1</span><br><br><span class="hljs-comment"># 通过 iptables 修改 TTL 值</span><br><span class="hljs-attribute">iptables</span> -t mangle -A POSTROUTING -j TTL --ttl-set <span class="hljs-number">64</span><br><br><span class="hljs-comment"># iptables 拒绝 AC 进行 Flash 检测</span><br><span class="hljs-attribute">iptables</span> -I FORWARD -p tcp --sport <span class="hljs-number">80</span> --tcp-flags ACK ACK -m string --algo bm --string <span class="hljs-string">&quot; src=\&quot;http://1.1.1.&quot;</span> -j DROP  <br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-Apache" data-language="Apache"><code class="language-Apache"># @SunBK201 - https:&#x2F;&#x2F;blog.sunbk201.site
+iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53
+iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53
+
+# 通过 rkp-ipid 设置 IPID
+iptables -t mangle -N IPID_MOD
+iptables -t mangle -A FORWARD -j IPID_MOD
+iptables -t mangle -A OUTPUT -j IPID_MOD
+iptables -t mangle -A IPID_MOD -d 0.0.0.0&#x2F;8 -j RETURN
+iptables -t mangle -A IPID_MOD -d 127.0.0.0&#x2F;8 -j RETURN
+# 由于本校局域网是A类网，所以我将这一条注释掉了，具体要不要注释结合你所在的校园网
+# iptables -t mangle -A IPID_MOD -d 10.0.0.0&#x2F;8 -j RETURN
+iptables -t mangle -A IPID_MOD -d 172.16.0.0&#x2F;12 -j RETURN
+iptables -t mangle -A IPID_MOD -d 192.168.0.0&#x2F;16 -j RETURN
+iptables -t mangle -A IPID_MOD -d 255.0.0.0&#x2F;8 -j RETURN
+iptables -t mangle -A IPID_MOD -j MARK --set-xmark 0x10&#x2F;0x10
+
+# ua2f 改UA
+iptables -t mangle -N ua2f
+# 由于本校局域网是A类网，所以我将这一条注释掉了，具体要不要注释结合你所在的校园网
+# iptables -t mangle -A ua2f -d 10.0.0.0&#x2F;8 -j RETURN
+iptables -t mangle -A ua2f -d 127.0.0.0&#x2F;8 -j RETURN
+iptables -t mangle -A ua2f -d 192.168.0.0&#x2F;16 -j RETURN # 不处理流向保留地址的包
+iptables -t mangle -A ua2f -p tcp --dport 443 -j RETURN # 不处理 https
+iptables -t mangle -A ua2f -p tcp --dport 22 -j RETURN # 不处理 SSH 
+iptables -t mangle -A ua2f -p tcp --dport 80 -j CONNMARK --set-mark 44
+iptables -t mangle -A ua2f -m connmark --mark 43 -j RETURN # 不处理标记为非 http 的流 (实验性)
+iptables -t mangle -A ua2f -m set --set nohttp dst,dst -j RETURN
+iptables -t mangle -A ua2f -j NFQUEUE --queue-num 10010
+  
+iptables -t mangle -A FORWARD -p tcp -m conntrack --ctdir ORIGINAL -j ua2f
+iptables -t mangle -A FORWARD -p tcp -m conntrack --ctdir REPLY
+
+
+# 防时钟偏移检测
+iptables -t nat -N ntp_force_local
+iptables -t nat -I PREROUTING -p udp --dport 123 -j ntp_force_local
+iptables -t nat -A ntp_force_local -d 0.0.0.0&#x2F;8 -j RETURN
+iptables -t nat -A ntp_force_local -d 127.0.0.0&#x2F;8 -j RETURN
+iptables -t nat -A ntp_force_local -d 192.168.0.0&#x2F;16 -j RETURN
+iptables -t nat -A ntp_force_local -s 192.168.0.0&#x2F;16 -j DNAT --to-destination 192.168.1.1
+
+# 通过 iptables 修改 TTL 值
+iptables -t mangle -A POSTROUTING -j TTL --ttl-set 64
+
+# iptables 拒绝 AC 进行 Flash 检测
+iptables -I FORWARD -p tcp --sport 80 --tcp-flags ACK ACK -m string --algo bm --string &quot; src&#x3D;\&quot;http:&#x2F;&#x2F;1.1.1.&quot; -j DROP  </code></pre></div></figure>
 
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>具体操作见：<a target="_blank" rel="noopener" href="https://www.notion.so/OpenWrt-f59ae1a76741486092c27bc24dbadc59">OpenWrt 编译与防检测部署教程</a></p>
 <p>最后，感谢开发 OpenWrt 防检测模块的作者们 <a target="_blank" rel="noopener" href="https://github.com/Zxilly">Zxilly</a>、 <a target="_blank" rel="noopener" href="https://github.com/CHN-beta">CHN-beta</a> 、<a target="_blank" rel="noopener" href="https://github.com/SunBK201/UA3F">SunBK201</a></p>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    let bq = document.querySelectorAll("blockquote");
-    if (bq.length > 1) { // 确保至少有两个blockquote
-      bq[1].setAttribute("id", "caution");
-    }
-  });
-</script>
+<section class="footnotes"><h2>Reference</h2><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>网络上看到的，先辈们总结的。
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -500,6 +572,11 @@
         </div>
       
       
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年10月3日</div>
+        </div>
+      
       
         <div class="license-meta-item">
           <div>许可协议</div>
@@ -540,6 +617,12 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2024-10/%E8%BF%91%E5%86%B5%E8%AF%B4%E6%98%8E.html" title="近况说明">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">近况说明</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
@@ -563,7 +646,7 @@
   <div id="twikoo"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#comments', function() {
-      Fluid.utils.createScript('https://cdn.staticfile.org/twikoo/1.6.36/twikoo.all.min.js', function() {
+      Fluid.utils.createScript('https://cdn.staticfile.org/twikoo/1.6.39/twikoo.all.min.js', function() {
         var options = Object.assign(
           {"envId":"https://netlify.zengxpmaster.fun/.netlify/functions/twikoo","region":"ap-shanghai","path":"location.pathname"},
           {
@@ -666,7 +749,7 @@
                     zengxpmaster
                     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank"
                     rel="nofollow">CC BY-NC-SA 4.0</a>ㅤ
-                  Powered by <a href="https://pages.github.com/" target="_blank">Github Page</a>  & <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+                  Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>  & <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
                      <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
   
@@ -786,6 +869,21 @@
 <script  src="/js/plugins.js" ></script>
 
 
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
 
 
 
@@ -835,6 +933,12 @@
   });
 </script>
 
+
+  <script  src="https://cdn.staticfile.net/prism/1.29.0/components/prism-core.min.js" ></script>
+
+  <script  src="https://cdn.staticfile.net/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" ></script>
+
+  <script  src="https://cdn.staticfile.net/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
 
   <script src=https://cdn.staticfile.org/clipboard.js/2.0.11/clipboard.min.js></script>
 
