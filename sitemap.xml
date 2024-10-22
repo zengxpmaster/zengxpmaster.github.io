@@ -74,13 +74,6 @@
 
   
   <url>
-    <loc>https://www.zengxpmaster.fun/tags/OpenWrt/</loc>
-    <lastmod>2024-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.zengxpmaster.fun/tags/GitHub/</loc>
     <lastmod>2024-10-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -89,6 +82,13 @@
   
   <url>
     <loc>https://www.zengxpmaster.fun/tags/Hexo/</loc>
+    <lastmod>2024-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.zengxpmaster.fun/tags/OpenWrt/</loc>
     <lastmod>2024-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

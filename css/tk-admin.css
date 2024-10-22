@@ -1,0 +1,9 @@
+.tk-admin-container {
+    position: fixed;
+    top: 7%;
+    right: 2px;
+    width: 80vw;
+    height: 88vh;
+    overflow: hidden;
+    pointer-events: none 
+}
